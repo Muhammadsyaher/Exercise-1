@@ -1,0 +1,24 @@
+import bpy
+
+# Set the dimensions of the box
+width = 1.0
+height = 1.0
+depth = 1.0
+
+# Create a new mesh and add vertices
+mesh = bpy.data.meshes.new("Box")
+vertices = [
+    (0, 0, 0),
+    (0, height, 0),
+    (width, height, 0),
+    (width, 0, 0),
+    (0, 0, depth),
+    (0, height, depth),
+    (width, height, depth),
+    (width, 0, depth),
+]
+mesh.from_pydata(vertices, [], [(0, 1, 2, 3), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (0, 4, 7, 3), (4, 5, 6, 7)])
+
+# Create a new object and link it to the scene
+object = bpy.data.objects.new("Box", mesh)
+bpy.context.scene.collection.objects.link(object)
