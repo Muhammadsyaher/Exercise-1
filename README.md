@@ -1,4 +1,4 @@
-# SMJE4263
+# Exercise 1
 
 Discussion
 1.  The importance of scripting in 3D graphics: The exercise demonstrates how scripting can be used to create complex 3D models with a high degree of control and         flexibility. Scripting allows us to automate repetitive tasks, experiment with different parameters and settings, and create variations of models quickly and efficiently.
